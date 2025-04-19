@@ -47,7 +47,7 @@ const Hero = () => {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          Hi, I’m <span className="fw-500">Rashed</span>
+          Hi, I'm <span className="fw-500">Builder Info</span> — your trusted guide for building the perfect home.
         </div>
         <div className="row">
           <div
@@ -56,7 +56,7 @@ const Hero = () => {
             data-aos-delay="300"
           >
             <h1 className="hero-heading fw-500 font-recoleta tx-dark mb-65 lg-mb-40">
-              Building digital products, brands &amp; expereince
+            Building the future, one brick at a time
             </h1>
           </div>
           <div
@@ -65,7 +65,7 @@ const Hero = () => {
             data-aos-delay="400"
           >
             <p className="text-lg pe-xxl-4 ps-xxl-4 mb-75 lg-mb-50">
-              Janu is your online team mangement tool that easy and prompt
+            Builder Info is your trusted partner in real estate and infrastructure development — reliable, efficient, and built to last.
             </p>
           </div>
         </div>
