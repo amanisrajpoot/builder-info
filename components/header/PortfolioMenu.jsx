@@ -34,7 +34,7 @@ const PortfolioMenu = () => {
           <li className="d-block d-lg-none">
             <div className="logo">
               <Link href="/" className="d-block">
-                <img src="/images/logo/logo_04.png" alt="" width={90} />
+                <img src="/images/logo/builder_info_logo.png" alt="" width={90} />
               </Link>
             </div>
           </li>

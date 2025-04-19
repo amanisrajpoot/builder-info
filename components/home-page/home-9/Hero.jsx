@@ -37,7 +37,7 @@ const Hero = () => {
     <div className="hero-banner-four text-center position-relative" id="s1">
       <div className="container">
         <img
-          src="/images/media/img_26.jpg"
+          src="/images/logo/builder_info_logo.png"
           alt=""
           className="lazy-img avatar-img m-auto rounded-circle"
           data-aos="fade-up"
@@ -47,7 +47,7 @@ const Hero = () => {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          Hi, I'm <span className="fw-500">Builder Info</span> — your trusted guide for building the perfect home.
+          Hi, I&apos;m <span className="fw-500">Builder Info</span> — your trusted guide for building the perfect home.
         </div>
         <div className="row">
           <div

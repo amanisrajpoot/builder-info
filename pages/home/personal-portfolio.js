@@ -18,7 +18,7 @@ import Social from "../../components/home-page/home-9/Social";
 const PersonalPortfolio = () => {
   return (
     <>
-      <Seo pageTitle="Builder Info" />
+      <Seo pageTitle="Builder Info - Building the future, one brick at a time" />
 
       {/* <!-- 
         =============================================
@@ -330,7 +330,7 @@ const PersonalPortfolio = () => {
             <div className="col-lg-4 mb-30 order-lg-0">
               <div className="logo d-flex justify-content-center justify-content-lg-start">
                 <Link href="/">
-                  <img src="/images/logo/logo_04.png" alt="" width={77} />
+                  <img src="/images/logo/builder_info_logo.png" alt="" width={77} />
                 </Link>
               </div>
             </div>
