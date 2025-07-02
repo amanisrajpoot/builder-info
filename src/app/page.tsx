@@ -1,103 +1,100 @@
 import Image from "next/image";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <div>
+      {/* Hero Section */}
+      <div className="relative min-h-[380px] md:min-h-[450px] flex items-center justify-center bg-gray-100 overflow-hidden">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="/construction-hero.jpg"
+          alt="Construction site hero"
+          fill
+          className="object-cover object-center opacity-80"
           priority
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 text-center text-white max-w-2xl mx-auto px-4 py-8 flex flex-col items-center justify-center">
+          <h1 className="text-3xl md:text-5xl font-bold drop-shadow-lg leading-tight">Builder Info: India's Construction Marketplace</h1>
+          <p className="mt-4 text-base md:text-xl drop-shadow">Connect with residential and commercial builders, contractors, suppliers, architects, and engineers. Build your vision with the best in the industry.</p>
+          <div className="flex flex-col sm:flex-row gap-3 mt-6 justify-center w-full max-w-xs mx-auto">
+            <a href="/post-project" className="inline-block px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold shadow hover:bg-primary/90 transition text-center">Post a Project</a>
+            <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-secondary text-secondary-foreground font-semibold shadow hover:bg-secondary/90 transition text-center">Contact Us</a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+      {/* Features Section */}
+      <div className="max-w-5xl mx-auto py-12 px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex flex-col items-center text-center">
+          <Image src="/builders-icon.png" alt="Browse Builders" width={64} height={64} className="mb-3" />
+          <h3 className="font-semibold text-lg mb-1">Browse Builders</h3>
+          <p className="text-muted-foreground text-sm">Find residential builders, commercial developers, contractors, architects, engineers, and suppliers for your project.</p>
+        </div>
+        <div className="flex flex-col items-center text-center">
+          <Image src="/project-icon.png" alt="Post Project" width={64} height={64} className="mb-3" />
+          <h3 className="font-semibold text-lg mb-1">Post a Project</h3>
+          <p className="text-muted-foreground text-sm">Describe your requirements and get competitive quotes from top experts in every category.</p>
+        </div>
+        <div className="flex flex-col items-center text-center">
+          <Image src="/materials-icon.png" alt="Find Materials" width={64} height={64} className="mb-3" />
+          <h3 className="font-semibold text-lg mb-1">Find Materials</h3>
+          <p className="text-muted-foreground text-sm">Source quality construction materials from trusted suppliers across India.</p>
+        </div>
+      </div>
+
+      {/* How it Works Section */}
+      <div className="bg-muted py-12">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-center mb-8">How it Works</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+            <div>
+              <div className="mb-2 text-3xl">📝</div>
+              <div className="font-semibold">Post Project</div>
+              <div className="text-sm text-muted-foreground">Share your requirements and budget.</div>
+            </div>
+            <div>
+              <div className="mb-2 text-3xl">🔍</div>
+              <div className="font-semibold">Get Quotes</div>
+              <div className="text-sm text-muted-foreground">Receive offers from verified builders and suppliers.</div>
+            </div>
+            <div>
+              <div className="mb-2 text-3xl">🤝</div>
+              <div className="font-semibold">Hire & Connect</div>
+              <div className="text-sm text-muted-foreground">Choose the best fit and start your project.</div>
+            </div>
+            <div>
+              <div className="mb-2 text-3xl">🏗️</div>
+              <div className="font-semibold">Build & Track</div>
+              <div className="text-sm text-muted-foreground">Collaborate and track progress to completion.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Testimonials Section */}
+      <div className="max-w-4xl mx-auto py-12 px-4">
+        <h2 className="text-2xl font-bold text-center mb-8">What Our Users Say</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-card rounded-lg p-6 shadow flex flex-col items-center text-center">
+            <Image src="/avatar1.jpg" alt="User 1" width={56} height={56} className="rounded-full mb-3" />
+            <div className="font-semibold mb-1">Amit Sharma</div>
+            <div className="text-sm text-muted-foreground mb-2">Homeowner, Delhi</div>
+            <div className="text-sm">“I found the perfect contractor for my home renovation. The process was smooth and transparent!”</div>
+          </div>
+          <div className="bg-card rounded-lg p-6 shadow flex flex-col items-center text-center">
+            <Image src="/avatar2.jpg" alt="User 2" width={56} height={56} className="rounded-full mb-3" />
+            <div className="font-semibold mb-1">Priya Patel</div>
+            <div className="text-sm text-muted-foreground mb-2">Builder, Mumbai</div>
+            <div className="text-sm">“This platform helped me connect with genuine clients and grow my business.”</div>
+          </div>
+          <div className="bg-card rounded-lg p-6 shadow flex flex-col items-center text-center">
+            <Image src="/avatar3.jpg" alt="User 3" width={56} height={56} className="rounded-full mb-3" />
+            <div className="font-semibold mb-1">Suresh Kumar</div>
+            <div className="text-sm text-muted-foreground mb-2">Supplier, Bengaluru</div>
+            <div className="text-sm">“A great way to reach new customers and showcase my materials.”</div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
