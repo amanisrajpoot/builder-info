@@ -41,7 +41,7 @@ export default function ContactPage() {
     <div className="max-w-xl mx-auto py-12 px-4">
       <h1 className="text-2xl font-bold mb-6 text-center">Contact Us</h1>
       {submitted ? (
-        <div className="bg-green-100 text-green-800 p-4 rounded mb-6 text-center">Thank you for reaching out! We'll get back to you soon.</div>
+        <div className="bg-green-100 text-green-800 p-4 rounded mb-6 text-center">Thank you for reaching out! We&apos;ll get back to you soon.</div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4 bg-card p-6 rounded shadow">
           <div>
