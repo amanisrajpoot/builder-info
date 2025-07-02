@@ -13,6 +13,7 @@ const builders: Builder[] = [
     location: "New York, NY",
     specialties: ["Residential", "Commercial"],
     contactEmail: "alex@skyline.com",
+    category: "Residential Builder",
   },
   {
     id: "2",
@@ -24,6 +25,7 @@ const builders: Builder[] = [
     location: "San Francisco, CA",
     specialties: ["Renovation", "Interior Design"],
     contactEmail: "priya@urbanbuild.com",
+    category: "Contractor",
   },
   {
     id: "3",
@@ -35,14 +37,11 @@ const builders: Builder[] = [
     location: "Austin, TX",
     specialties: ["Infrastructure", "Smart Homes"],
     contactEmail: "chen@eastside.com",
+    category: "Engineer",
   },
 ];
 
-interface Props {
-  params: { id: string };
-}
-
-export default function BuilderProfilePage({ params }: Props) {
+export default function BuilderProfilePage({ params }: { params: { id: string } }) {
   const builder = builders.find((b) => b.id === params.id);
   if (!builder) {
     return (
