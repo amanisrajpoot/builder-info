@@ -1,14 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Project } from "@/types/project";
 
 const PAGE_SIZE = 10;
 
 export default function ProjectsPage() {
-  const [projects, setProjects] = useState<Project[]>([]);
+  const [projects, setProjects] = useState([]);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
-  const [filtered, setFiltered] = useState<Project[]>([]);
+  const [filtered, setFiltered] = useState([]);
 
   useEffect(() => {
     const stored = localStorage.getItem("builderinfo_projects");

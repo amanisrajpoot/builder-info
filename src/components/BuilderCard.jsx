@@ -1,9 +1,8 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Builder } from "@/types/builder";
 
-export default function BuilderCard({ builder }: { builder: Builder }) {
+export default function BuilderCard({ builder }) {
   return (
     <Link href={`/builders/${builder.id}`} className="rounded-lg border bg-card p-6 flex flex-col items-center gap-4 shadow-sm hover:scale-[1.02] transition-transform focus:outline-none" tabIndex={0}>
       <Image

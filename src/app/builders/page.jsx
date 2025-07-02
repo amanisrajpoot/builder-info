@@ -1,7 +1,7 @@
 import BuilderCard from "@/components/BuilderCard";
-import { Builder } from "@/types/builder";
+// import { Builder } from "@/types/builder";
 
-const builders: Builder[] = [
+const builders = [
   {
     id: "1",
     name: "Amit Sharma",

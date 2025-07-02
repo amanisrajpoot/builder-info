@@ -32,20 +32,7 @@ const PROJECT_TYPES = [
   "Other (Specify)",
 ];
 
-interface ProjectForm {
-  title: string;
-  description: string;
-  budget: string;
-  location: string;
-  requiredSkills: string[];
-  skillInput: string;
-  constructionType: string;
-  constructionTypeOther: string;
-  projectType: string;
-  projectTypeOther: string;
-}
-
-const initialForm: ProjectForm = {
+const initialForm = {
   title: "",
   description: "",
   budget: "",
@@ -59,11 +46,11 @@ const initialForm: ProjectForm = {
 };
 
 export default function PostProjectPage() {
-  const [form, setForm] = useState<ProjectForm>(initialForm);
+  const [form, setForm] = useState(initialForm);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
-  const [locationSuggestions, setLocationSuggestions] = useState<string[]>([]);
-  const [allLocations, setAllLocations] = useState<string[]>([]);
+  const [locationSuggestions, setLocationSuggestions] = useState([]);
+  const [allLocations, setAllLocations] = useState([]);
 
   useEffect(() => {
     import("./locations.json").then((mod) => {
@@ -71,15 +58,15 @@ export default function PostProjectPage() {
     });
   }, []);
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
+  function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
-  function handleSkillInput(e: React.ChangeEvent<HTMLInputElement>) {
+  function handleSkillInput(e) {
     setForm({ ...form, skillInput: e.target.value });
   }
 
-  function handleSkillKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+  function handleSkillKeyDown(e) {
     if ((e.key === "," || e.key === "Enter") && form.skillInput.trim()) {
       e.preventDefault();
       if (!form.requiredSkills.includes(form.skillInput.trim())) {
@@ -92,14 +79,14 @@ export default function PostProjectPage() {
     }
   }
 
-  function removeSkill(skill: string) {
+  function removeSkill(skill) {
     setForm({
       ...form,
       requiredSkills: form.requiredSkills.filter((s) => s !== skill),
     });
   }
 
-  function handleLocationChange(e: React.ChangeEvent<HTMLInputElement>) {
+  function handleLocationChange(e) {
     const value = e.target.value;
     setForm({ ...form, location: value });
     if (value.length > 1 && allLocations.length > 0) {
@@ -111,12 +98,12 @@ export default function PostProjectPage() {
     }
   }
 
-  function selectLocation(loc: string) {
+  function selectLocation(loc) {
     setForm({ ...form, location: loc });
     setLocationSuggestions([]);
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e) {
     e.preventDefault();
     if (!form.title || !form.description || !form.budget || !form.location || !form.constructionType || !form.projectType || form.requiredSkills.length === 0) {
       setError("Please fill in all required fields.");
@@ -222,7 +209,7 @@ export default function PostProjectPage() {
         <div>
           <label className="block font-medium mb-1">Required Skills/Specialties</label>
           <div className="flex flex-wrap gap-2 mb-2">
-            {form.requiredSkills.map((skill: string) => (
+            {form.requiredSkills.map((skill) => (
               <span key={skill} className="bg-primary/10 text-primary px-2 py-1 rounded flex items-center gap-1">
                 {skill}
                 <button type="button" className="ml-1 text-xs" onClick={() => removeSkill(skill)}>&times;</button>

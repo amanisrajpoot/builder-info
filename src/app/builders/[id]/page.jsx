@@ -1,8 +1,7 @@
-import { Builder } from "@/types/builder";
 import Image from "next/image";
 
 // This mock data should match the one in /builders/page.tsx for now
-const builders: Builder[] = [
+const builders = [
   {
     id: "1",
     name: "Alex Johnson",
@@ -41,7 +40,7 @@ const builders: Builder[] = [
   },
 ];
 
-export default function BuilderProfilePage({ params }: { params: { id: string } }) {
+export default function Page({ params }) {
   const builder = builders.find((b) => b.id === params.id);
   if (!builder) {
     return (
