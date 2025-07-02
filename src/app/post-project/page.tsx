@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Project } from "@/types/project";
+// import { Project } from "@/types/project";
 
 const BUDGET_OPTIONS = [
   "Under ₹1 lakh",

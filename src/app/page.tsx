@@ -14,7 +14,7 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 text-center text-white max-w-2xl mx-auto px-4 py-8 flex flex-col items-center justify-center">
-          <h1 className="text-3xl md:text-5xl font-bold drop-shadow-lg leading-tight">Builder Info: India's Construction Marketplace</h1>
+          <h1 className="text-3xl md:text-5xl font-bold drop-shadow-lg leading-tight">Builder Info: India&apos;s Construction Marketplace</h1>
           <p className="mt-4 text-base md:text-xl drop-shadow">Connect with residential and commercial builders, contractors, suppliers, architects, and engineers. Build your vision with the best in the industry.</p>
           <div className="flex flex-col sm:flex-row gap-3 mt-6 justify-center w-full max-w-xs mx-auto">
             <a href="/post-project" className="inline-block px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold shadow hover:bg-primary/90 transition text-center">Post a Project</a>

@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Builder Info | India's Construction Marketplace",
+  title: "Builder Info | India&apos;s Construction Marketplace",
   description: "Builder Info connects you with residential and commercial builders, contractors, suppliers, architects, and engineers across India. Post projects, find professionals, and source materials—all in one place.",
 };
 
